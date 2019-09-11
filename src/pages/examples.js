@@ -1,11 +1,12 @@
 import React from 'react'
-import Header from '../examples/Header'
-
+import HeaderHook from '../examples/Header-Hooks'
+import HeaderStatic from '../examples/Header-Static'
 const examples = () => {
   return (
     <div>
       examples page
-      <Header />
+      <HeaderHook />
+      <HeaderStatic />
     </div>
   )
 }
