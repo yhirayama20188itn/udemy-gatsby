@@ -12,5 +12,23 @@ module.exports = {
     author: '@hirayama',
     data: { name: 'hirayama', age: 28 }
   },
-  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-styled-components`]
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`, `gatsby-plugin-sharp`
+  ]
 }
